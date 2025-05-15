@@ -13,6 +13,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header -->
@@ -47,7 +50,13 @@
         <div class="float-element" data-direction="-x" data-speed="0.18"></div>
       </div>
       <div class="hero-container">
-        <div class="hero-content">
+        <div
+          class="hero-content"
+          data-aos="slide-right"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-offset="200"
+        >
           <h1 class="hero-title">Mahlet</h1>
           <p class="hero-subtitle">Full Stack Web Developer</p>
           <div class="hero-cta">
@@ -61,7 +70,13 @@
             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
-        <div class="hero-image">
+        <div
+          class="hero-image"
+          data-aos="slide-left"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-offset="200"
+        >
           <img
             src="./assets/photo_2025-05-13_12-01-54.jpg"
             alt="Profile"
@@ -74,18 +89,42 @@
     <!-- About Section -->
     <section class="about" id="about">
       <div class="section-container">
-        <h2>About Me</h2>
+        <h2
+          data-aos="flip-right"
+          data-aos-duration="3000"
+          data-aos-delay="300"
+          data-aos-offset="200"
+        >
+          About Me
+        </h2>
         <div class="about-grid">
-          <div class="about-image">
+          <div
+            class="about-image"
+            data-aos="flip-right"
+            data-aos-duration="3000"
+            data-aos-offset="200"
+          >
             <img
               src="./assets/photo_2025-05-13_12-02-17.jpg"
               alt="Working"
               class="about-img"
             />
           </div>
-          <div class="about_text">
+          <div
+            class="about_text"
+            data-aos="flip-left"
+            data-aos-duration="3000"
+            data-aos-delay="300"
+            data-aos-offset="200"
+          >
             <div class="about-content">
-              <h3>Full Stack Web Developer</h3>
+              <h3
+                data-aos="slide-left"
+                data-aos-duration="3000"
+                data-aos-offset="200"
+              >
+                Full Stack Web Developer
+              </h3>
               <p>
                 Passionate about building responsive and efficient web
                 applications with over 5 years of experience in modern web
@@ -115,7 +154,13 @@
                 </div>
               </div>
             </div>
-            <div class="sign">
+            <div
+              class="sign"
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+              data-aos-offset="200"
+            >
               <img src="./assets/sign.png" alt="" />
             </div>
           </div>
@@ -126,7 +171,13 @@
     <!-- Education Section -->
     <section class="education" id="education">
       <div class="section-container">
-        <h2>Education & Certifications</h2>
+        <h2
+          data-aos="slide-right"
+          data-aos-duration="1000"
+          data-aos-offset="200"
+        >
+          Education & Certifications
+        </h2>
         <div class="timeline">
           <!-- Replace timeline-line with SVG -->
           <svg
@@ -148,7 +199,12 @@
               </linearGradient>
             </defs>
           </svg>
-          <div class="timeline-item right">
+          <div
+            class="timeline-item right"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <div class="timeline-content">
               <h3>MS Computer Science</h3>
               <p class="time">Stanford University • 2016 - 2018</p>
@@ -164,7 +220,12 @@
             </div>
             <div class="timeline-point"></div>
           </div>
-          <div class="timeline-item left">
+          <div
+            class="timeline-item left"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <div class="timeline-content">
               <h3>BS Computer Science</h3>
               <p class="time">MIT • 2012 - 2016</p>
@@ -180,7 +241,12 @@
             </div>
             <div class="timeline-point"></div>
           </div>
-          <div class="timeline-item right">
+          <div
+            class="timeline-item right"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <div class="timeline-content">
               <h3>Full Stack Certification</h3>
               <p class="time">FreeCodeCamp • 2019</p>
@@ -195,7 +261,12 @@
             <div class="timeline-point"></div>
           </div>
           <div class="timeline-item left">
-            <div class="timeline-content">
+            <div
+              class="timeline-content"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-offset="200"
+            >
               <h3>React Developer Nanodegree</h3>
               <p class="time">Udacity • 2020</p>
               <p>
@@ -216,9 +287,16 @@
     <!-- Projects Section -->
     <section class="projects" id="projects">
       <div class="section-container">
-        <h2>Featured Projects</h2>
+        <h2 data-aos="zoom-in" data-aos-duration="3000" data-aos-offset="200">
+          Featured Projects
+        </h2>
         <div class="project-grid">
-          <div class="project-card">
+          <div
+            class="project-card"
+            data-aos="slide-right"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <img
               src="https://www.figma.com/community/resource/26e67c44-fd8d-4a9d-b2b4-1ff36233472c/thumbnail"
               alt="Apple Clone"
@@ -229,7 +307,12 @@
               <button class="project-btn">View Project</button>
             </div>
           </div>
-          <div class="project-card">
+          <div
+            class="project-card"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <img
               src="https://resolvecommunications.co.za/wp-content/uploads/2023/04/Yy247gYvzaMZXprhZHXy4E.jpeg"
               alt="Netflix Clone"
@@ -240,7 +323,12 @@
               <button class="project-btn">View Project</button>
             </div>
           </div>
-          <div class="project-card">
+          <div
+            class="project-card"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <img
               src="https://media.assettype.com/analyticsinsight%2F2024-07%2Fb4ad079c-5ae9-43ce-a27c-95f80cb37dd8%2FAmazon_1024x585.jpg"
               alt="Amazon Clone"
@@ -251,7 +339,12 @@
               <button class="project-btn">View Project</button>
             </div>
           </div>
-          <div class="project-card">
+          <div
+            class="project-card"
+            data-aos="flip-left"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <img
               src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40"
               alt="Task Manager"
@@ -262,7 +355,12 @@
               <button class="project-btn">View Project</button>
             </div>
           </div>
-          <div class="project-card">
+          <div
+            class="project-card"
+            data-aos="slide-up"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <img
               src="https://www.mirrorfly.com/blog/wp-content/uploads/2021/09/Build-Realtime-chat-app.png"
               alt="Chat App"
@@ -273,7 +371,12 @@
               <button class="project-btn">View Project</button>
             </div>
           </div>
-          <div class="project-card">
+          <div
+            class="project-card"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <img
               src="https://www.gurutechnolabs.com/wp-content/uploads/2021/09/A-Complete-Guide-on-Weather-App-Development.jpg"
               alt="Weather App"
@@ -289,11 +392,24 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section
+      class="contact"
+      id="contact"
+      data-aos="zoom-out"
+      data-aos-duration="4000"
+      data-aos-offset="200"
+    >
       <div class="section-container">
-        <h2>Get In Touch</h2>
+        <h2 data-aos="flip-left" data-aos-duration="1000" data-aos-offset="200">
+          Get In Touch
+        </h2>
         <div class="contact-wrapper">
-          <div class="contact-info">
+          <div
+            class="contact-info"
+            data-aos="flip-right"
+            data-aos-duration="1000"
+            data-aos-offset="200"
+          >
             <h3>Contact Information</h3>
             <div class="info-item">
               <i class="fas fa-envelope"></i>
@@ -326,6 +442,9 @@
             class="contact-form"
             action="https://formsubmit.co/yosefworku111@gmail.com"
             method="POST"
+            data-aos="flip-left"
+            data-aos-duration="3000"
+            data-aos-offset="200"
           >
             <!-- Disable CAPTCHA -->
             <input type="hidden" name="_captcha" value="false" />
@@ -393,12 +512,21 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-container">
+      <div
+        class="footer-container"
+        data-aos="fade-in"
+        data-aos-duration="3000"
+      >
         <div class="footer-logo">MS</div>
         <p>© 2025 Developed by Yosef Worku</p>
       </div>
     </footer>
 
     <script src="script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
