@@ -1050,21 +1050,20 @@ h2::after {
   }
 
   .skills-list {
-    grid-template-columns: repeat(2, 1fr); /* 2 skills per row */
-    gap: 0.8rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .skill-item {
-    padding: 0.8rem 0.5rem;
-    font-size: 0.8rem;
-    flex-direction: column; /* Stack icon and text */
+   .skill-item {
+    padding: 0.8rem 0.5rem; /* Or adjust as needed */
+    font-size: 0.8rem;      /* Or adjust as needed */
+    flex-direction: column; /* Stacks icon above text, good for narrow columns */
     text-align: center;
     gap: 0.5rem;
   }
 
   .skill-item i {
-    font-size: 1.8rem; /* Reduce icon size */
-    height: 50px;
+    font-size: 1.8rem;     /* Or adjust icon size as needed */
+    height: 50px;          /* Or adjust icon container as needed */
     width: 50px;
     margin-bottom: 0.3rem;
   }
@@ -1269,13 +1268,21 @@ h2::after {
     height: 180px;
   }
 
-  .skills-list {
-    grid-template-columns: 1fr; /* Single column for skills on very small screens */
+   .skills-list {
+    grid-template-columns: repeat(3, 1fr); /* MODIFIED: Ensure 3 columns */
+    /* Consider an even smaller gap if needed, e.g., gap: 0.5rem; */
   }
+
+  /* .skill-item and .skill-item i styles might need further reduction here if using 3 columns */
+  .skill-item {
+    padding: 0.6rem 0.3rem; /* Example adjustment */
+    font-size: 0.75rem;     /* Example adjustment */
+  }
+
   .skill-item i {
-    font-size: 1.6rem;
-    height: 45px;
-    width: 45px;
+    font-size: 1.5rem;      /* Example adjustment */
+    height: 40px;           /* Example adjustment */
+    width: 40px;
   }
 
   .timeline-content h3 {
