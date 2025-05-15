@@ -915,11 +915,380 @@ h2::after {
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
   }
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    max-width: 100%;
+  body {
+    font-size: 0.95rem; /* Slightly reduce base font size for mobile */
   }
-  .hero {
-    top: 4.9rem;
+
+  .section-container {
+    padding: 3rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  h2 {
+    font-size: 2rem; /* Reduce heading size */
+    margin-bottom: 2.5rem;
+  }
+
+  h2:after {
+    width: 60px; /* Slightly reduce underline width */
+    height: 3px;
+  }
+
+  /* --- Header --- */
+  .header-container {
+    padding: 1.2rem 1rem; /* Adjust header padding */
+  }
+
+  .logo-text {
+    font-size: 1.6rem; /* Adjust logo size */
+  }
+
+  .nav-links.active {
+    /* Ensure dropdown menu is styled well */
+    padding: 1.5rem;
+    gap: 1.5rem;
+    background: rgba(58, 46, 46, 0.98); /* Ensure solid background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .nav-links.active a {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  /* --- Hero Section --- */
+  /* .hero { top: 4.9rem; } is already set in this media query, fine to leave */
+
+  .hero-container {
+    padding: 2rem 1rem 3rem; /* Adjust padding, grid-template-columns: 1fr is from 968px */
+    gap: 1.5rem;
+    text-align: center; /* Center content when stacked */
+  }
+
+  .hero-image {
+    order: -1; /* Move image above text on mobile */
+  }
+
+  .profile-img {
+    width: 220px; /* Further reduce profile image size */
+    height: 220px;
+    margin: 0 auto 1.5rem auto; /* Adjust margins */
+    border-width: 6px;
+  }
+
+  .hero-title {
+    font-size: 2.8rem; /* Reduce title size */
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem; /* Reduce subtitle size */
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-cta {
+    flex-direction: column; /* Stack buttons */
+    align-items: center; /* Center stacked buttons */
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-btn {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 280px; /* Max width for stacked buttons */
+  }
+
+  .social-links {
+    justify-content: center; /* Center social icons */
+    gap: 1rem;
+  }
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .floating-system {
+    display: none; /* Hide floating elements on mobile for performance/clarity */
+  }
+
+  /* --- About Section --- */
+  /* .about-grid { grid-template-columns: 1fr; } is from 968px */
+  .about-grid {
+    gap: 2rem;
+    margin-top: 120px;
+  }
+
+  .about-image {
+    margin-bottom: 1rem; /* Add some space if image is first */
+    display: flex;
+    justify-content: center; /* Center image */
+  }
+
+  .about-img {
+    height: auto; /* Adjust image height */
+    max-height: 320px;
+    width: 90%; /* Make image responsive */
+    max-width: 300px;
+    transform: rotate(0deg); /* Straighten image */
+    margin: 0 auto; /* Center image */
+  }
+
+  .about_text {
+    padding: 0 0.5rem; /* Adjust padding */
+  }
+  .about_text .about-content p {
+    font-size: 0.9rem;
+    text-align: justify; /* Justify paragraph for better mobile reading */
+  }
+
+  .about-content h3 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 skills per row */
+    gap: 0.8rem;
+  }
+
+  .skill-item {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.8rem;
+    flex-direction: column; /* Stack icon and text */
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .skill-item i {
+    font-size: 1.8rem; /* Reduce icon size */
+    height: 50px;
+    width: 50px;
+    margin-bottom: 0.3rem;
+  }
+
+  .sign img {
+    width: 130px; /* Adjust signature size */
+    margin: 2rem auto 0 auto; /* Center signature */
+    display: block;
+  }
+
+  /* --- Education Section --- */
+  /* Overriding/refining the 968px timeline styles for better mobile view */
+  .timeline {
+    padding: 2rem 1rem; /* Add horizontal padding to timeline container */
+  }
+  .timeline-line {
+    left: 25px; /* Position line closer to the left edge */
+    /* The SVG path d="M 50% 0..." will draw in the middle of this element */
+    /* To make it a straight line from the left, SVG would need change, which is not allowed.
+       This means the 'wavy' line will be on the left. */
+  }
+
+  .timeline-item {
+    /* All items will be on the right of the line */
+    width: calc(
+      100% - 30px
+    ); /* Adjust width to fit, considering line position */
+    left: 30px !important; /* Position item to the right of where line starts */
+    padding-left: 15px; /* Space between line and content start */
+    margin-bottom: 1.5rem;
+  }
+  .timeline-item.left, /* Ensure left items also follow this */
+  .timeline-item.right {
+    /* Styles from .timeline-item already apply */
+  }
+
+  .timeline-content {
+    padding: 1rem; /* Reduce padding in content box */
+  }
+
+  .timeline-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .timeline-content p,
+  .timeline-content .time {
+    font-size: 0.85rem;
+  }
+
+  .timeline-point {
+    /* Line is at absolute ~25px. Item content starts after item's left (30px) + padding-left (15px) = ~45px.
+       Point (width 18px) should be centered on the line at 25px.
+       Relative to timeline-item which is at left: 30px.
+       Point's left edge absolute = 25px - (18px/2) = 16px.
+       Point's relative left = Absolute point left - Absolute item left
+                             = 16px - 30px = -14px.
+    */
+    left: -14px !important;
+    top: 1.2rem; /* Align point with content start */
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+  }
+
+  /* --- Projects Section --- */
+  .project-grid {
+    grid-template-columns: 1fr; /* Single column for projects */
+    gap: 1.5rem;
+  }
+
+  .project-card img {
+    height: 220px; /* Adjust image height */
+  }
+
+  .project-overlay {
+    padding: 1.5rem;
+  }
+
+  .project-overlay h3 {
+    font-size: 1.3rem;
+  }
+  .project-overlay p {
+    font-size: 0.85rem;
+  }
+
+  .project-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  /* --- Contact Section --- */
+  /* .contact-wrapper { grid-template-columns: 1fr; } is from 968px */
+  .contact-wrapper {
+    padding: 1.5rem 1rem; /* Reduce padding */
+    gap: 2rem;
+  }
+  .contact {
+    padding: 4rem 0; /* Reduce section padding */
+  }
+  .contact h2 {
+    /* specific h2 for contact section */
+    font-size: 1.8rem;
+    margin-bottom: 40px; /* specific margin for contact h2 */
+  }
+  .contact h2::after {
+    /* specific after for contact h2 */
+    bottom: -12px;
+  }
+
+  .contact-info {
+    padding: 1rem;
+  }
+  .contact-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-item {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  .info-item i {
+    font-size: 1.1rem;
+    margin-right: 0.8rem;
+  }
+  .contact-info .social-links {
+    /* Be specific for social links in contact */
+    margin-top: 1.5rem;
+    justify-content: flex-start; /* Align to left if preferred in this column */
+  }
+  .contact-info .social-icon {
+    /* Be specific for social icons in contact */
+    width: 38px;
+    height: 38px;
+  }
+
+  /* .form-group { grid-template-columns: 1fr; } is from 968px */
+  .input-wrapper {
+    margin-bottom: 1.8rem; /* Adjust spacing */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1rem 0.8rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-form label {
+    font-size: 0.9rem;
+    top: 1rem;
+  }
+  .contact-form input:focus + label,
+  .contact-form textarea:focus + label,
+  .contact-form input:not(:placeholder-shown) + label,
+  .contact-form textarea:not(:placeholder-shown) + label {
+    top: -0.2rem; /* Adjust label position on focus/filled */
+    font-size: 0.75rem;
+  }
+
+  .submit-btn {
+    width: 100%; /* Full width button */
+    padding: 0.9rem;
+    font-size: 1rem;
+    margin-left: 0; /* Reset margin from desktop */
+  }
+
+  /* --- Footer --- */
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+  .footer-logo {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Optional: Fine-tuning for very small screens if necessary */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+  .section-container {
+    padding: 6.5rem 0.8rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr; /* Single column for skills on very small screens */
+  }
+  .skill-item i {
+    font-size: 1.6rem;
+    height: 45px;
+    width: 45px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.05rem;
+  }
+  .timeline-content p,
+  .timeline-content .time {
+    font-size: 0.8rem;
+  }
+  .project-card img {
+    height: 180px;
+  }
+  .contact-wrapper {
+    padding: 1rem 0.5rem;
   }
 }
